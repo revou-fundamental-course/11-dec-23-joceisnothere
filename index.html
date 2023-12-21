@@ -7,39 +7,115 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <nav>
-        <img src="" alt="Logo" class="Logo">
+    <nav class="nav-bar">
+        <img src="assets/Aetheria Academy (1080 x 360 piksel).png" alt="Logo" class="Logo">
         <ul class="nav-items">
-            <li>Home</li>
-            <li>Our Profile</li>
-            <li>Achievements</li>
-            <li>Message Us</li>
+            <li id="home-link">Home</li>
+            <li id="profile-link">Our Profile</li>
+            <li id="achievements-link">Achievements</li>
+            <li id="message-link">Message Us</li>
         </ul>
     </nav>
-    <header>
-        <h1>Hi Jocelyn, welcome to our website.</h1>
+    <header id="welcome-section">
+        <h1 class="welcome">Hi <span id="name">...</span>, welcome to our website.</h1>
         <p>Where boundless possibilities await on the journey of knowledge and discovery!</p>
+        <!--<button id="tombol">Change Name</button> -->
+        <script src="js/script.js"></script>
         <img src="assets/header1.png"/>
-        <hr>
     </header>
+    <div class="facility">
         <h1>Facilities</h1>
+    </div>
     <div class="facilitations">
         <div>
-            <div class="circle"></div>
+            <div class="circle" style="background-image: url('assets/classroom.jpg')"></div>
             <p>Classroom</p>
         </div>
         <div>
-            <div class="circle"></div>
+            <div class="circle" style="background-image: url('assets/auditorium.jpg')"></div>
             <p>Auditorium</p>
         </div>
         <div>
-            <div class="circle"></div>
+            <div class="circle" style="background-image: url('assets/field.jpg')"></div>
             <p>Sports Field</p>
         </div>
         <div>
-            <div class="circle"></div>
+            <div class="circle" style="background-image: url('assets/cafeteria.jpg')"></div>
             <p>Cafeteria</p>
         </div>
     </div>
+    <div class="container" id="about-section">
+        <div class="about-school">
+            <img src="assets/side.jpg"/>
+        </div>
+        <div class="about-text">
+            <h1>About School</h1>
+            <p>Founded upon principles of intellectual curiosity and commitment to nurturing future leaders, our institution embodies a harmonious blend of tradition and progressive education. With state-of-the-art facilities and a distinguished faculty dedicated to fostering creativity and critical thinking, Aetheria Academy offers a diverse and inclusive environment where students embark on a journey.</p>       
+        </div>
+    </div>
+    <div class="vision-mission">
+        <h1>Vision</h1>
+        <p>At Aetheria Academy, our vision is to cultivate a community of empowered learners driven byy curiosity, compassion, and a relentless pursuit of knowledge. We aspire to be a global leader in education, fostering innovation, ethical leadership, and social responsibility.</p>
+
+        <h1>Mission</h1>
+        <p>Our mission at Aetheria Academy is to provide a dynamic educational experience that transcends boundaries, fostering intellectual growth, personal development, and a lifelong passion for learning. We aim to equip our students with the skills, values, and perspectives necessary to thrive in an ever-evolving world, empowering them to make meaningful contributions to society.</p>
+    </div>
+    <div class="achievements">
+        <h1>Achievements</h1>
+        <div class="img-achieve">
+            <img src="assets/award.jpg">
+            <img src="assets/drama.jpg">
+            <img src="assets/study.jpg">
+        </div>
+        <div class="achievement">
+            <h2>Academic Excellence</h2>
+            <p>Our students consistently excel in academic pursuits, achieving top ranks in national and international competitions.</p>
+        </div>
+        <div class="achievement">
+            <h2>Community Outreach</h2>
+            <p>We are committed to community service, having initiated various programs that positively impact society.</p>
+        </div>
+        <div class="achievement">
+            <h2>Arts and Culture</h2>
+            <p>Our school fosters a vibrant arts community, showcasing talents in music, drama, and fine arts through numerous accolades.</p>
+        </div>
+    </div>
+    <div class="img-hall">
+        <img src="assets/hall.jpg">
+    </div>
+    <div class="message" id="message-section">
+        <h1>Message Us</h1>
+    </div>
+<div class="form-container">
+    <form name="message-form" onsubmit="return validateForm()">
+            <label for="name-input">Name:</label>
+            <input type="text" placeholder="Your Name" id="name-input" name="name-input">
+            <br><br>
+            <label for="birth-date">Birth Date:</label>
+            <input type="date" id="birth-date" name="birth-date">
+            <br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="messages">Message:</label>
+            <textarea placeholder="Type here" name="messages" cols="48"></textarea>
+            <br><br>
+            <button id="submit" type="submit">Submit</button>
+            <p id="error-name"></p>
+            <br><br>
+    </form>
+    <div class="responses">
+        <div id="time-response"></div>
+            <div id="current-time"></div>
+            <div id="name-response">Name: </div>
+            <div id="birthdate-response">Birth Date: </div>
+            <div id="gender-response">Gender: </div>
+            <div id="message-response">Message: </div>
+    </div>
+</div>
+    <script src="js/script.js"></script>
 </body>
 </html>

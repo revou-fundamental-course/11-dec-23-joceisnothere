@@ -1,41 +1,284 @@
-body{
-    font-family:Helvetica;
-    text-align: center;
+body {
+    font-family:Helvetica; 
+    margin: 0;
 }
-nav{
+.Logo {
+    width: 330px;
+    height:50px;
+}
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
-.nav-items{
+.nav-bar {
     list-style-type: none;
     margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #0E376D;
 }
-.nav-items li{
+.nav-bar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+.nav-items li {
     display: inline;
     margin-right: 20px;
+    color: #f1f1f1;
 }
-header img{
+header img {
     width: 100%;
     height: 578px;
     margin-top: 20px;
-    margin-bottom: 40px;
 }
-header{
+header {
     text-align: center;
+    color:#0E376D;
 }
-.facilitations{
+header p {
+    color: black;
+}
+.facilitations {
     display: flex;
     margin-top: 40px;
     justify-content: space-around;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
 }
-.circle{
-    width: 100px;
-    height: 100px;
+.facility {
+    text-align: center;
+    color:#0E376D;
+}
+.circle {
+    width: 250px;
+    height: 250px;
     border: 1px solid rgba(134, 134, 134, 0.842);
-    border-radius: 50px;
+    border-radius: 125px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    max-width: 100%;
+}
+.about-school {
+    flex-basis: 100%;
+    margin-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.about-text {
+    font-size: 18px;
+    padding-left: 20px;
+    margin-right: 50px;
+    text-align: justify;
+    color: #f1f1f1;
+}
+.container {
+    background-color:#0E376D
+}
+.vision-mission h1 {
+    text-align: center;
+    color:#0E376D;
+}
+.vision-mission p { 
+    text-align: justify;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 350px;
+    padding-right: 350px;
+    font-size: 18px;
+    color:black;
+}
+.img-hall {
+    width: 100%;
+    height: 580px;
+    padding-bottom: 60px;
+}
+.message {
+    font-size: 18px;
+    color: #0E376D;
+    text-align: center;
+}
+label {
+    width: 150px;
+    display:inline-block;
+}
+#name-input {
+    width: 25%;
+}
+#birth-date {
+    width: 25%;
+}
+form {
+    margin-left: 35px;
+    width: 65%;
+}
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+.responses {
+    width: 25%;
+    margin-right: 13%;
+    margin-bottom:20px;
+    background-color: #f1f1f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.label-button {
+    display: block;
+    width: 100%;
+}
+.achievements {
+    background-color: #0E376D;
+    color: #f1f1f1;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.achievements h1 {
+    margin-bottom: 20px;
+}
+.achievement {
+    margin-bottom: 20px;
+}
+.img-achieve {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px; 
+}
+.img-achieve img {
+    max-width: 30%; 
+    margin: 25px 25px; 
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column
+    }
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-items li {
+        margin: 10px 0; 
+        text-align: center;
+        margin-right: 36px;
+    }
+    nav {
+        padding: 10px; 
+    }
+    header img {
+        height: auto; 
+        margin-top: 10px;
+    }
+    .facilitations {
+        flex-direction: column; 
+        align-items: center;
+        margin-top: 20px;
+    }
+    .circle {
+        width: 200px; 
+        height: 200px;
+        border-radius: 100px; 
+    }
+    .vision-mission p {
+        padding-left: 20px; 
+        padding-right: 20px;
+    }
+    .img-hall {
+        height: auto;
+        padding-bottom: 20px; 
+    }
+    form {
+        margin-left: 0; 
+        margin-right: 0; 
+    }
+    label {
+        width: auto; 
+        display: block;
+        margin-bottom: 5px; 
+    }
+    input[type="text"], input[type="date"], textarea {
+        width: 80%; 
+        margin-bottom: 10px; 
+    }
+    form {
+        margin-left: 50px;
+    }
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
+    }
+    .about-school {
+        order: -1; 
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 20px;
+        margin-left: 0; 
+    }
+    .about-text {
+        margin: 0;
+        margin-top: 0; 
+        margin-bottom: 20px;
+        text-align: justify;
+        padding: 0 20px; 
+        margin-right: 0;
+    }
+    .about-text h1 {
+        text-align: center;
+    }
+    label[for="male"],
+    label[for="female"] {
+        display: inline-block; 
+        margin-right: 10px; 
+    }
+
+    input[type="radio"] {
+        display: inline-block;
+        vertical-align: middle; 
+    }
+    .img-achieve {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        height: auto; 
+    }
+
+    .img-achieve img {
+        max-width: 80%; 
+        margin: 10px 0; 
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .responses {
+        width: 80%;
+        margin: 0 auto; 
+        background-color: #f1f1f1;
+        padding: 10px; 
+        margin-bottom: 20px;
+    }
+}
 }
